@@ -1,163 +1,152 @@
-#import "../snippets.typ" as snip
+#import "../snippets.typ" as sn
+#import "../block_snippets.typ" as bs
 = Single qubit gates (Nielsen 1.2.1, 2.1.8, 4.2)
 
 == Principle of time evolution
+#bs.info([The quantum state $sn.ket(psi)$ at the current time point $t$ transitions to a new quantum state $sn.ket(psi')$ at a later time point $t' > t$])
 
-#snip.info(eval("The quantum state $snip.ket(psi)$ at the current time point $t$ transitions to a new quantum state $#snip.ket(psi)$ at a later time point $t > t$", mode: "markup"))
+The transition is described by a complex unary matrix $U$ which also preserves the normalization:
 
-// The transition is described by a complex unary matrix $U$ which also preserves the normalization:
-
-// $$
-// \vert \psi \rangle = U \cdot \vert \psi \rangle
-// $$
-
-// TODO: insert circuit notation here
-
-// <aside>
-// ⚠️
-
-// The circuit notation is read from **left to right** but the *normal* notation ($U \cdot \vert \psi \rangle$) from **right to left**
-
-// </aside>
-
-// == Examples of quantum gates
-
-// === Pauli-X-Gate
-
-// The *X-Gate* is the quantum gate equivalent of the *regular* **NOT-Gate**; it flips $\vert 0  \rangle \leftrightarrow \vert 1 \rangle$
-
-// $$
-// X \equiv \sigma_1 = \begin{pmatrix} 0&1\\1&0\\ \end{pmatrix}
-// $$
-
-// === Pauli-Y-Gate
-
-// $$
-// Y \equiv \sigma_2 = \begin{pmatrix*}[r] 0&-i\\i&0\\ \end{pmatrix*}
-// $$
-
-// === Pauli-Z-Gate
-
-// $$
-// Z \equiv \sigma_3 \equiv \begin{pmatrix*}[r] 1&0\\0&-1\\ \end{pmatrix*}
-// $$
-
-// The **Z-Gate** leaves $\vert 0  \rangle$ unchanged but flips the sign of the coefficient of $\vert 1 \rangle$
-
-// $$
-// Z \ket{\psi} = cos\left(\frac{\theta}{2}\right) \ket{0} \textbf{\textcolor{red}{ - }} e^{i\phi} sin\left(\frac{\theta}{2}\right)\ket{1}
-//     = cos\left(\frac{\theta}{2}\right) \ket{0} + e^{i(\phi + \pi)}sin\left(\frac{\theta}{2}\right)\ket{1}
-// $$
-
-// this leads to the new *Bloch-Sphere* angle $\theta ‘ = \theta$, $\phi ‘ = \phi + \pi$
-
-// <aside>
-// ℹ️
-
-// The gates are respectively a $180^\circ$ rotation around the axis (The Z-Gate rotates around the Z-Axis and so on).
-
-// </aside>
-
-// **X, Y, Z-Gates** are called *Pauli-Matrices*. The *Pauli-Vector* $\vec{\sigma} = \left( \sigma_1, \sigma_2, \sigma_3 \right) = \left( X, Y, Z \right)$ is a vector of 2x2-Matrices
-
-// === Hadamad-Gate
-
-// $$
-// H = \frac{1}{\sqrt{2}} \begin{pmatrix*}[r]1&1\\1&-1\\ \end{pmatrix*}
-// $$
-
-// $$
-// H \cdot \ket{\psi} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1&1\\1&-1\\ \end{pmatrix} \cdot \begin{pmatrix} \alpha\\ \beta\\ \end{pmatrix} = \alpha \underbrace{\frac{\ket{0} + \ket{1}}{\sqrt{2}}}_{\text{Base change}} + \beta \underbrace{\frac{\ket{0} - \ket{1}}{\sqrt{2}}}_{\text{Base change}}
-// $$
+$
+sn.ket(psi) = U dot sn.ket(psi)
+$
 
 // TODO: insert circuit notation here
 
-// === Phase-Gate
+#bs.warn([The circuit notation is read from *left to right* but the _normal_ notation ($U dot sn.ket(psi)$) from *right to left*])
 
-// $$
-// S = \begin{pmatrix} 1&0\\0&i\\ \end{pmatrix}
-// $$
+== Examples of quantum gates
 
-// === T-Gate
+=== Pauli-X-Gate
 
-// $$
-// T = \begin{pmatrix} 1&0\\0&\textcolor{red}{e^{\frac{i\pi}{4}}}\\ \end{pmatrix}
-// $$
+The *X-Gate* is the quantum gate equivalent of the _regular_ *NOT-Gate*; it flips $sn.ket(0) arrow.l.r.double.long sn.ket(1)$
 
-// <aside>
-// ℹ️
+$
+X equiv sigma_1 = mat(0, 1; 1, 0)
+$
 
-// $T^2 = S \left(\text{ since } e^{(i\pi/4)^2} = e^{i\pi/2} = i\right)$
+=== Pauli-Y-Gate
 
-// </aside>
+$
+Y equiv sigma_2 = mat(0, -i; i, 0 )
+$
 
-// === Pauli-Matrices Properties
+=== Pauli-Z-Gate
 
-// $$
-// \begin{align}
-// \sigma_j^{2} = I \quad(\text{identity}) \qquad \forall j\\
-// \sigma_j \sigma_k = - \sigma_j \sigma_k \qquad \forall j,k \quad j\neq k\\
+$
+Z equiv sigma_3 equiv mat(1, 0; 0, -1 )
+$
 
-// \begin{split}
-// \textcolor{blue}{[}\sigma_j, \sigma_k\textcolor{blue}{]} &= \sigma_j\sigma_k - \sigma_k\sigma_j\\ 
-// &= 2i\sigma_l \quad \forall(j,k.l) \in (1\,2\,3) \\ [Y,Z] &= 2i\cdot X
-// \end{split}
-// \end{align}
-// $$
+The _Z-Gate_ leaves $sn.ket(0)$ unchanged but flips the sign of the coefficient of $sn.ket(1)$
+
+$
+Z sn.ket(psi) = cos (theta / 2) sn.ket(0) #text(red)[-] e^(i phi) sin (theta / 2)sn.ket(1)
+    = cos (theta / 2) sn.ket(0) + e^(i(phi + pi)) sin (theta / 2)sn.ket(1)
+$
+
+this leads to the new *Bloch-Sphere* angle $theta ‘ = theta$, $phi ‘ = phi + pi$
+
+#bs.info([The gates are respectively a $180^degree$ rotation around the axis (The Z-Gate rotates around the Z-Axis and so on).])
+
+_X, Y, Z-Gates_ are called *Pauli-Matrices*. The *Pauli-Vector* $arrow(sigma) = ( sigma_1, sigma_2, sigma_3 ) = ( X, Y, Z )$ is a vector of 2x2-Matrices
+
+=== Hadamad-Gate
+
+$
+H = 1/sqrt(2) mat(1, 1; 1, -1)
+$
+
+$
+H dot sn.ket(psi) = 1/sqrt(2) mat(1, 1; 1, -1 ) dot mat( alpha; beta ) = alpha underbrace((sn.ket(0) + sn.ket(1))/sqrt(2), "Base change") + beta underbrace((sn.ket(0) - sn.ket(1))/sqrt(2), "Base change")
+$
+
+// TODO: insert circuit notation here
+
+=== Phase-Gate
+
+$
+S = mat( 1, 0; 0, i )
+$
+
+=== T-Gate
+
+$
+T = mat(1, 0; 0, #text(red)[$e^((i pi)/4)$] )
+$
+
+// TODO: seems weird the squaring result in the equation part below
+#bs.info([$T^2 = S ("since" e^((i pi\/4)^2) = e^((i pi)\/2) = i)$])
+
+=== Pauli-Matrices Properties
+
+$
+sigma_j^2 = I quad "identity" quad quad forall j\
+$
+
+$
+sigma_j sigma_k &= - sigma_j sigma_k quad quad forall j,k quad j != k
+$
+
+$
+#text(blue)[\[]sigma_j, sigma_k #text(blue)[\]] &= sigma_j sigma_k - sigma_k sigma_j \
+&= 2i sigma_l quad forall (j,k.l) in (1,2,3)
+$
+
+$
+[Y,Z] &= 2i dot X
+$
 
 // TODO: insert handout stuff here
 
-// === X-Y-Decomposition of an arbitrary 2x2 unitary matrix
+=== X-Y-Decomposition of an arbitrary 2x2 unitary matrix
 
-// For any unitary matrix $U \in \mathbb{C}^{2\times2}$ there $\exists \alpha, \beta, \gamma, \delta \in \mathbb{R}$ s.t.:
+For any unitary matrix $U in bb(C)^(2 times 2)$ there $exists alpha, beta, gamma, delta in bb(R)$ s.t.:
 
-// $$
-// U=e^{i\alpha}\underbrace{\begin{pmatrix}e^{-i\beta/2}& 0\\0&e^{i\beta/2}\end{pmatrix}}_{R_z(\beta)}\underbrace{\begin{pmatrix}\cos{(\frac{\gamma}{2})}& -\sin{(\frac{\gamma}{2})}\\\sin{(\frac{\gamma}{2})}&\cos{(\frac{\gamma}{2})}\end{pmatrix}}_{R_y(\gamma)}\underbrace{\begin{pmatrix}e^{-i\delta/2}& 0\\0&e^{i\delta/2}\end{pmatrix}}_{R_z(\delta)}
-// $$
+$
+U = e^(i alpha) underbrace(mat(e^(-i beta/2), 0; 0, e^(i beta/2)), R_z (beta)) dot underbrace(mat(cos (gamma/2), -sin (gamma/2); sin (gamma/2), cos (gamma/2)), R_y (gamma)) dot underbrace(mat(e^(-i delta\/2), 0; 0, e^(i delta\/2)), R_z (delta))
+$
 
-// = Multiple Qubit (Nielsen 1.2.1, 2.1.7)
+= Multiple Qubit (Nielsen 1.2.1, 2.1.7)
 
-// For *two* qubits the states generalize to:
+For *two* qubits the states generalize to:
 
-// $$
-// \left\{ \ket{00},\ket{01},\ket{10},\ket{11} \right\}
-// $$
+$
+\{ sn.ket(00), sn.ket(01), sn.ket(10), sn.ket(11) \}
+$
 
-// as computation basis state, in general all possible combinations of bit strings of 0’s and 1’s of length $n$ for $n$ bit qubits.
+as computation basis state, in general all possible combinations of bit strings of 0’s and 1’s of length $n$ for $n$ bit qubits.
 
-// == General two qubit state
+== General two qubit state
 
-// $$
-// \begin{align*}
-// \ket{\psi} &= \alpha_{00}\ket{00}+\alpha_{01}\ket{01}+\alpha_{10}\ket{10}+\alpha_{11}\ket{11}\\
-// &= \sum_{i_1}\dots \sum_{i_n} \alpha_{i_1,\dots,i_n}\ket{i_1\dots i_n}
-// \end{align*}\\
-// \alpha\text{'s} \in \mathbb{C} \text{ and } \sum \vert \alpha\text{'s}\vert^2 = 1
-// $$
+$
+sn.ket(psi) &= alpha_(00) sn.ket(00) + alpha_(01) sn.ket(01)+alpha_(10) sn.ket(10)+alpha_(11) sn.ket(11)\
+&= sum_(i_1)dots sum_(i_n) alpha_(i_1,dots,i_n) sn.ket(i_1dots i_n)\
+&alpha text('s) in bb(C) " and " sum |alpha text('s)|^2 = 1
+$
 
-// Can identify the basis states with unit vectors:
+Can identify the basis states with unit vectors:
 
-// $$
-// \ket{00}=\begin{pmatrix}1\\0\\0\\0\\\end{pmatrix},\ket{01}=\begin{pmatrix}0\\1\\0\\0\\\end{pmatrix},\ket{10}=\begin{pmatrix}0\\0\\1\\0\\\end{pmatrix},\ket{11}=\begin{pmatrix}0\\0\\0\\1\\\end{pmatrix}
-// $$
+$
+sn.ket(00)=mat(1;0;0;0),sn.ket(01)=mat(0;1;0;0),sn.ket(10)=mat(0;0;1;0),sn.ket(11)=mat(0;0;0;1)
+$
 
-// thus:
+thus:
 
-// $$
-// \ket{\psi} = \begin{pmatrix}\alpha_{00}\\\alpha_{01}\\\alpha_{10}\\\alpha_{11}\\\end{pmatrix} \in\mathbb{C}^{4}
-// $$
+$
+sn.ket(psi) = mat(alpha_(00);alpha_(01);alpha_(10);alpha_(11)) in bb(C)^(4)
+$
 
-// <aside>
-// ℹ️
 
-// **What happens if we measure one qubit of a two qubit state?**
-// Say we measure the first qubit then we obtain the following:
+#bs.info([
+  _What happens if we measure one qubit of a two qubit state?_
+Say we measure the first qubit then we obtain the following:
 
-// - $0$ with probability $|\alpha_{00}|^{2} + |\alpha_{01}|^{2}$
-// - $1$ with probability $|\alpha_{10}|^{2} + |\alpha_{11}|^{2}$
+- $0$ with probability $|alpha_(00)|^(2) + |alpha_(01)|^(2)$
+- $1$ with probability $|alpha_(10)|^(2) + |alpha_(11)|^(2)$
 
-// The wave function directly after the measurement will be:
+The wave function directly after the measurement will be:
 
-// - $0:\ket{\psi'} = \frac{\alpha_{00} \ket{00} +\alpha_{01} \ket{01}}{\sqrt{|\alpha_{00}|^{2} + |\alpha_{01}|^{2}}}$
-// - $1:\ket{\psi'} = \frac{\alpha_{10} \ket{10} +\alpha_{11} \ket{11}}{\sqrt{|\alpha_{10}|^{2} + |\alpha_{11}|^{2}}}$
-// </aside>
+- $0: sn.ket(psi') = (alpha_(00) sn.ket(00) +alpha_(01) sn.ket(01))/(sqrt(|alpha_(00)|^(2) + |alpha_(01)|^(2)))$
+
+- $1: sn.ket(psi') = (alpha_(10) sn.ket(10) +alpha_(11) sn.ket(11))/(sqrt(|alpha_(10)|^(2) + |alpha_(11)|^(2)))$
+])

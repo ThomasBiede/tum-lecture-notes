@@ -1,4 +1,5 @@
-#import "../snippets.typ" as snip
+#import "../snippets.typ" as sn
+#import "../block_snippets.typ" as bs
 #import "@preview/ilm:1.3.1": *
 
 = Qubit (Nielsen 2.1)
@@ -11,16 +12,16 @@ States represented as 0 or 1
 
 State is represented as a superposition of 0 and 1.
 
-A qubit state $snip.ket(psi)$ (”cat psi”) is described as the following:
+A qubit state $sn.ket(psi)$ (”cat psi”) is described as the following:
 
-$ snip.ket(psi) = alpha dot snip.ket(0) + beta dot snip.ket(1) quad alpha, beta in bb(C) \ "and" quad |alpha|^2 + |beta|^2 = 1 $
+$ sn.ket(psi) = alpha dot sn.ket(0) + beta dot sn.ket(1) quad alpha, beta in bb(C) \ "and" quad |alpha|^2 + |beta|^2 = 1 $
 
-Further $snip.ket(psi) in bb(C)^2$ can be represented as a column vector where:
+Further $sn.ket(psi) in bb(C)^2$ can be represented as a column vector where:
 
 $
-snip.ket(0) = mat(1; 0) quad 
-snip.ket(1) = mat(0; 1) quad
-snip.ket(psi) = mat(alpha;beta)
+sn.ket(0) = mat(1; 0) quad 
+sn.ket(1) = mat(0; 1) quad
+sn.ket(psi) = mat(alpha;beta)
 $
 
 Contrary to *classical* bits, qubits cannot be observed/measured in general
@@ -29,14 +30,14 @@ _standard_ measurement will result in classical bit $0$ with probability $|alpha
 
 === Wave Function Collapse
 
-if the qubit’s state is measured to be $0$ then it will be $0$ directly after the measurement: $ snip.ket(psi) = snip.ket(0) $ (same for $1$)
+if the qubit’s state is measured to be $0$ then it will be $0$ directly after the measurement: $ sn.ket(psi) = sn.ket(0) $ (same for $1$)
 
-#snip.info(eval(mode: "markup", "*In practice*: one can only estimate the probability $|alpha|^2$, $|beta|^2$ experimental by repeating the same experiment (*trial or shot*)"))
+#bs.info([*In practice*: one can only estimate the probability $|alpha|^2$, $|beta|^2$ experimental by repeating the same experiment (*trial or shot*)])
 == Circuit Notation
 
 //TODO: insert images here
 
-=== What is a qubit physically? $(snip.ket(0), snip.ket(1))$
+=== What is a qubit physically? $(sn.ket(0), sn.ket(1))$
 
 - two different polarization of a photon, e.g.  /, circular
 - alignment of a nuclear or $e^-$-spin, e.g. $arrow.t, arrow.b$
@@ -55,9 +56,9 @@ $ alpha = cos ( theta/2) quad beta = sin(theta/2)
 In general ($bb(C)$):
 
 $ &alpha = e^(i dot gamma)( theta/2) quad beta = e^(i dot (gamma + phi)) sin (theta/2) \ \
-snip.ket(psi) &= e^(i dot gamma)cos ( theta/2) dot snip.ket(0) + e^(i dot (gamma + phi))sin (theta/2) dot snip.ket(1) \
-&= e^(i dot gamma) (cos ( theta/2) dot snip.ket(0) + e^(i dot phi)sin (theta/2) dot snip.ket(1) ) $
+sn.ket(psi) &= e^(i dot gamma)cos ( theta/2) dot sn.ket(0) + e^(i dot (gamma + phi))sin (theta/2) dot sn.ket(1) \
+&= e^(i dot gamma) (cos ( theta/2) dot sn.ket(0) + e^(i dot phi)sin (theta/2) dot sn.ket(1) ) $
 
-// Thus $snip.ket(psi)$ is characterized by $theta$ and $phi$
+// Thus $sn.ket(psi)$ is characterized by $theta$ and $phi$
 
 // TODO: insert 3D unit sphere here

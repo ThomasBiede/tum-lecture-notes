@@ -30,3 +30,4 @@
 
 #include "./chapters/00_introduction.typ"
 #include "./chapters/01_qubit.typ"
+#include "./chapters/02_single_qubit_gates.typ"
