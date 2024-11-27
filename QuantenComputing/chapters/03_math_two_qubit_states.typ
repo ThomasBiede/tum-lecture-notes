@@ -54,7 +54,7 @@ $
  sn.ket("ab")  arrow.r.long.bar  sn.ket(a\, underbrace(a  plus.circle b, "add. mod 2"))  quad quad quad quad  forall a,b  in  {0,1}
 $
 
-// TODO: insert circuit notation
+#bs.placeholder()
 
 ==== Matrix representation
 
@@ -67,7 +67,7 @@ U_("CNOT")=  mat(
 )
 $
 
-// TODO: insert alternate circuit notation
+#bs.placeholder()
 
 Can generalize Pauli-X to any unitary operator $ #text(green)[U] in bb(C)^(2 times 2)$ acting on target qubit:
 
@@ -77,21 +77,21 @@ $
  sn.ket(underbrace(#text(orange)[0], #text(orange)[control]) overbrace(0, "target"))  arrow.r.long.bar  sn.ket(00),  sn.ket(#text(orange)[0]1)  arrow.r.long.bar  sn.ket(01),  sn.ket( #text(orange)[1]0)  arrow.r.long.bar  sn.ket(1)  #text(blue)[$times.circle$] ( #text(green)[U] sn.ket(0)),  sn.ket( #text(orange)[1]1)  arrow.r.long.bar  sn.ket(1)  #text(blue)[$times.circle$] ( #text(green)[U] sn.ket(1))
 $
 
-// TODO: insert alternative repr.
+#bs.placeholder()
 
 === Example: Controlled-Z Gate
 
-// TODO: insert alternative repr.
+#bs.placeholder()
 
 === Example: Controlled-U Gate for multiple target qubits
 
-// TODO: insert repr.
+#bs.placeholder()
 
 #bs.info([Single qubit and CNOT gates are universal: they can be used to implement an arbitrary unitrary operation on n qubits. (Quantum analogue of universality of classical NAND gate).])
 
 ==== Example: A circuit consisting only of single qubit gates and CNOTs
 
-// TODO: insert repr.
+#bs.placeholder()
 
 Operation on basis states: $a,b  in  ( 0,1 )$
 
@@ -108,11 +108,11 @@ sn.ket(10) & arrow.r.long.bar  sn.ket(1)  times.circle (Y sn.ket(0)) = i sn.ket(
 sn.ket(11) & arrow.r.long.bar  sn.ket(1)  times.circle (Y sn.ket(1)) = -i sn.ket(10)
 $
 
-// TODO: insert repr.
+#bs.placeholder()
 
 Generalization to arbitrary number of tensor factors possible, e.g.:
 
-// TODO: insert repr.
+#bs.placeholder()
 
 == Basic Properties
 #bs.info([
@@ -121,7 +121,7 @@ Generalization to arbitrary number of tensor factors possible, e.g.:
   3. $(A  times.circle B)^ dagger = A^ dagger  times.circle B^ dagger$    (ad joint)
   4. $(A  times.circle B)  times.circle C = A  times.circle (B  times.circle C)$    (associative property)
   5. $(A  times.circle B)  dot (C  times.circle D) = (A  dot C)  times.circle (B  dot D)$    (for matrices with compatible dimensions) 
-  // TODO: INSERT CIRCUIT DRAWING
+  #bs.placeholder()
   6. Kronecker product of Hermitian matrices is Hermitian
   7. Kronecker product of unitary matrices is unitary
 ])

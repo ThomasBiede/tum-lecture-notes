@@ -35,7 +35,7 @@ if the qubit’s state is measured to be $0$ then it will be $0$ directly after 
 #bs.info([*In practice*: one can only estimate the probability $|alpha|^2$, $|beta|^2$ experimental by repeating the same experiment (*trial or shot*)])
 == Circuit Notation
 
-//TODO: insert images here
+#bs.placeholder()
 
 === What is a qubit physically? $(sn.ket(0), sn.ket(1))$
 
@@ -51,7 +51,7 @@ $ alpha = cos ( theta/2) quad beta = sin(theta/2)
 \
 |alpha|^2 + |beta|^2 = cos ( theta/2)^2 + sin(theta/2)^2 $
 
-// TODO: insert image of unit circle here
+#bs.placeholder()
 
 In general ($bb(C)$):
 
@@ -59,6 +59,6 @@ $ &alpha = e^(i dot gamma)( theta/2) quad beta = e^(i dot (gamma + phi)) sin (th
 sn.ket(psi) &= e^(i dot gamma)cos ( theta/2) dot sn.ket(0) + e^(i dot (gamma + phi))sin (theta/2) dot sn.ket(1) \
 &= e^(i dot gamma) (cos ( theta/2) dot sn.ket(0) + e^(i dot phi)sin (theta/2) dot sn.ket(1) ) $
 
-// Thus $sn.ket(psi)$ is characterized by $theta$ and $phi$
+Thus $sn.ket(psi)$ is characterized by $theta$ and $phi$
 
-// TODO: insert 3D unit sphere here
+#bs.placeholder()

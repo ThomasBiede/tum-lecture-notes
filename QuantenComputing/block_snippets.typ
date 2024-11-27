@@ -38,3 +38,10 @@
   )
 )
 }
+
+#let placeholder() = {
+  figure(
+    image("assets/images/placeholder.png", width: 50%),
+    caption: []
+  )
+}

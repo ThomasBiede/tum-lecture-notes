@@ -33,3 +33,4 @@
 #include "./chapters/02_single_qubit_gates.typ"
 #include "./chapters/03_math_two_qubit_states.typ"
 #include "./chapters/04_quantum_measurements.typ"
+#include "./chapters/05_entanglement_app.typ"

@@ -11,7 +11,7 @@ $
 sn.ket(psi) = U dot sn.ket(psi)
 $
 
-// TODO: insert circuit notation here
+#bs.placeholder()
 
 #bs.warn([The circuit notation is read from *left to right* but the _normal_ notation ($U dot sn.ket(psi)$) from *right to left*])
 
@@ -60,7 +60,7 @@ $
 H dot sn.ket(psi) = 1/sqrt(2) mat(1, 1; 1, -1 ) dot mat( alpha; beta ) = alpha underbrace((sn.ket(0) + sn.ket(1))/sqrt(2), "Base change") + beta underbrace((sn.ket(0) - sn.ket(1))/sqrt(2), "Base change")
 $
 
-// TODO: insert circuit notation here
+#bs.placeholder()
 
 === Phase-Gate
 
