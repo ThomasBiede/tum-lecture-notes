@@ -19,7 +19,7 @@
   preface: [
     #align(center + horizon)[]
   ],
-  bibliography: bibliography("bibliography/books.bib"),
+  bibliography: bibliography("bibliography/04_math_two_qubit_states.typ"),
   figure-index: (enabled: false),
   table-index: (enabled: false),
   listing-index: (enabled: false),
@@ -28,12 +28,13 @@
   date-format: "[day padding:none]. [month repr:long] [year]",
 )
 
-#include "./chapters/00_introduction.typ"
+// #include "./chapters/00_introduction.typ"
 #include "./chapters/01_qubit.typ"
 #include "./chapters/02_single_qubit_gates.typ"
-#include "./chapters/03_math_two_qubit_states.typ"
-#include "./chapters/04_quantum_measurements.typ"
-#include "./chapters/05_entanglement_app.typ"
-#include "./chapters/06_quantum_algos.typ"
-#include "./chapters/07_density_op.typ" // TODO: finish editing
-#include "./chapters/08_quantum_op.typ" // TODO: finish editing
+#include "./chapters/03_multiple_qubit.typ"
+#include "./chapters/04_math_two_qubit_states.typ"
+#include "./chapters/05_quantum_measurements.typ"
+#include "./chapters/06_entanglement_app.typ"
+#include "./chapters/07_quantum_algos.typ"
+#include "./chapters/08_density_op.typ"
+#include "./chapters/09_quantum_op.typ" // TODO: finish editing
