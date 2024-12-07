@@ -1,3 +1,5 @@
+#import "../snippets.typ" as sn
+#import "../block_snippets.typ" as bs
 = Multiple Qubit (Nielsen 1.2.1, 2.1.7)
 
 For *two* qubits the states generalize to:
