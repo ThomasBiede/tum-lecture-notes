@@ -19,7 +19,7 @@
   preface: [
     #align(center + horizon)[]
   ],
-  bibliography: bibliography("bibliography/04_math_two_qubit_states.typ"),
+  bibliography: bibliography("bibliography/books.bib"),
   figure-index: (enabled: false),
   table-index: (enabled: false),
   listing-index: (enabled: false),
