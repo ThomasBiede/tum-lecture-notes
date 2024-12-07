@@ -233,7 +233,8 @@ $
 
 Reduced density operator describing _Bob_'s qubit:
 $ 
-rho^A =& tr[rho^(A B)] = 1/4((alpha sn.ket(0) + beta sn.ket(1))(alpha^* sn.tek(0) + beta^*sn.tek(1)) +(alpha sn.ket(1) + beta sn.ket(0))\ 
+rho^A =& tr[rho^(A B)]\
+=& 1/4((alpha sn.ket(0) + beta sn.ket(1))(alpha^* sn.tek(0) + beta^*sn.tek(1)) +(alpha sn.ket(1) + beta sn.ket(0))\ 
 & (alpha^* sn.tek(1) + beta^*sn.tek(0)) + (alpha sn.ket(0) - beta sn.ket(1))(alpha^* sn.tek(0) - beta^*sn.tek(1)) + (alpha sn.ket(1) - beta sn.ket(0))\
 & (alpha^* sn.tek(1) - beta^*sn.tek(0)))\
 =& 1/4 ( 2 ( |alpha|^2 + |beta|^2) sn.ket(0)sn.tek(0) + 2 (underbrace(|alpha|^2 + |beta|^2, 1) sn.ket(1)sn.tek(1)\
