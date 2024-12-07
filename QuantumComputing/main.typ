@@ -35,3 +35,5 @@
 #include "./chapters/04_quantum_measurements.typ"
 #include "./chapters/05_entanglement_app.typ"
 #include "./chapters/06_quantum_algos.typ"
+#include "./chapters/07_density_op.typ" // TODO: finish editing
+#include "./chapters/08_quantum_op.typ" // TODO: finish editing

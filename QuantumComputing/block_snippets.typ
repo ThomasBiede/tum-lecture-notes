@@ -133,3 +133,44 @@
   )
 )
 }
+
+#let goal_icon = read("assets/icons/define.svg").replace(
+  "#000000",
+  "#F4511E"
+)
+
+#let definition = exp => {
+  block(
+  fill: rgb("#FFCCBC"),
+  inset: 8pt,
+  radius: 3pt,
+  grid(
+    columns: (1fr, 25fr),
+    gutter: 10pt,
+    align: (left, left + horizon),
+    image.decode(goal_icon),
+    exp
+  )
+)
+}
+
+
+#let proof_icon = read("assets/icons/proof.svg").replace(
+  "#000000",
+  "#00897B"
+)
+
+#let proof = exp => {
+  block(
+  fill: rgb("#B2DFDB"),
+  inset: 8pt,
+  radius: 3pt,
+  grid(
+    columns: (1fr, 25fr),
+    gutter: 10pt,
+    align: (left, left + horizon),
+    image.decode(proof_icon),
+    exp
+  )
+)
+}
