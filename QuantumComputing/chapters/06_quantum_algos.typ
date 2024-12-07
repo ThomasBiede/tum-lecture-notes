@@ -143,8 +143,9 @@ $D_k$ grows as $O(k^2)$, but must be $Omega(N)$ to distinguish between N alterna
 $k = 0: D_0 0 0$\
 $k arrow.r k+1:$\
 $
-D_(k+1) &= sum_x||O_x sn.ket(psi_k^x) - sn.ket(psi_k)||^2 = sum_x || underbrace(O_x(sn.ket(psi_k^x)), b) - underbrace(sn.ket(psi_k) + (O_x - I sn.ket(psi_k)), -2 sn.ket(x)sn.bra(x|psi_k) = c)||^2\
-&<= sum_x(||b||^(2) + 2||b||dot||c|| + ||c||^(2)) = sum_x (underbrace(||sn.ket(psi_k^x) - sn.ket(psi_k)||^(2), D_k) + 4 underbrace(||sn.ket(psi_k^x) - sn.ket(psi)|| |sn.bra(x|psi_k)|, "Cauchy-Schwarz") + 4 |sn.bra(psi_k|x)|^(2)\
+D_(k+1) &= sum_x||O_x sn.ket(psi_k^x) - sn.ket(psi_k)||^2\
+&= sum_x || underbrace(O_x(sn.ket(psi_k^x)), b) - underbrace(sn.ket(psi_k) + (O_x - I sn.ket(psi_k)), -2 sn.ket(x)sn.bra(x|psi_k) = c)||^2 <= sum_x(||b||^(2) + 2||b||dot||c|| + ||c||^(2))\
+&= sum_x (underbrace(||sn.ket(psi_k^x) - sn.ket(psi_k)||^(2), D_k) + 4 underbrace(||sn.ket(psi_k^x) - sn.ket(psi)|| |sn.bra(x|psi_k)|, "Cauchy-Schwarz") + 4 |sn.bra(psi_k|x)|^(2)\
 &<= D_k + 4 (underbrace(sum_x ||sn.ket(psi_k^x) - sn.ket(psi_k)||^(2), D_k))^(1/2) (underbrace(sum_x|sn.bra(x|psi_k)|^(2), 1))^(1/2)\
 &= D_k + 4 sqrt(D_k) + 4\
 &<= 4k^(2) + 8k + 4 = 4(k+1)
