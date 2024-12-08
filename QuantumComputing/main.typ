@@ -12,8 +12,8 @@
 #set text(lang: "en")
 
 #show: ilm.with(
-  title: [Quantum Computing\ A student written book],
-  author: "Thomas Biedermann",
+  title: [Quantum Computing],
+  author: "",
   date: datetime.today(),
   abstract: [],
   preface: [
@@ -37,4 +37,4 @@
 #include "./chapters/06_entanglement_app.typ"
 #include "./chapters/07_quantum_algos.typ"
 #include "./chapters/08_density_op.typ"
-#include "./chapters/09_quantum_op.typ" // TODO: finish editing
+#include "./chapters/09_quantum_op.typ"

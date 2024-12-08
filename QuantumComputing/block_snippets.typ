@@ -174,3 +174,24 @@
   )
 )
 }
+
+
+#let remark_icon = read("assets/icons/remark.svg").replace(
+  "#000000",
+  "#D81B60"
+)
+
+#let remark = exp => {
+  block(
+  fill: rgb("#F8BBD0"),
+  inset: 8pt,
+  radius: 3pt,
+  grid(
+    columns: (1fr, 25fr),
+    gutter: 10pt,
+    align: (left, left + horizon),
+    image.decode(remark_icon),
+    exp
+  )
+)
+}
