@@ -31,9 +31,9 @@ sn.ket(psi) = mat(alpha_(00);alpha_(01);alpha_(10);alpha_(11)) in bb(C)^(4)
 $
 
 
-#bs.info([
+#bs.question([
   _What happens if we measure one qubit of a two qubit state?_
-Say we measure the first qubit then we obtain the following:
+  Say we measure the first qubit then we obtain the following:
 
 - $0$ with probability $|alpha_(00)|^(2) + |alpha_(01)|^(2)$
 - $1$ with probability $|alpha_(10)|^(2) + |alpha_(11)|^(2)$

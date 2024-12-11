@@ -88,20 +88,22 @@ $
 triangle (M) := sqrt(sn.bra(M^2) - sn.bra(M)^2) = sqrt(sn.bra((M-sn.bra(M))^2))
 $
 
-=== Examples
-- Measuring a qubit w.r.t computational basis ${sn.ket(0), sn.ket(1)}$ is actually a projective measurement: $P_0 sn.ket(0) sn.tek(0), P_1 sn.ket(1) sn.tek(1)$
+#bs.example([
+  - Measuring a qubit w.r.t computational basis ${sn.ket(0), sn.ket(1)}$ is actually a projective measurement: $P_0 sn.ket(0) sn.tek(0), P_1 sn.ket(1) sn.tek(1)$
 
-- In general: measurement w.r.t. orthonormal basis ${sn.ket(u_1), sn.ket(u_2)}$ is a projective measurement: set $ P_M = sn.ket(u_m) sn.tek(u_m) quad "for m = 1,2" $ define observable M by: $ M :=  sum_(m=1)^2 lambda_m P_m quad "with arbitrary" lambda_1,lambda_2 in bb(R), lambda_1 != lambda_2 $
-- Measuring Pauli-Z: $ Z = 1 dot underbrace(mat(
+  - In general: measurement w.r.t. orthonormal basis ${sn.ket(u_1), sn.ket(u_2)}$ is a projective measurement: set $ P_M = sn.ket(u_m) sn.tek(u_m) quad "for m = 1,2" $ define observable M by: $ M :=  sum_(m=1)^2 lambda_m P_m quad "with arbitrary" lambda_1,lambda_2 in bb(R), lambda_1 != lambda_2 $
+  
+  - Measuring Pauli-Z: $ Z = 1 dot underbrace(mat(
     1, 0;
     0, 0
     ), P_0=sn.ket(0)sn.tek(0)) + (-1) dot underbrace(mat(
     0, 0;
     0, 1
     ), P_1) $ agrees with standard measurement w.r.t. computational basis ${sn.ket(0), sn.ket(1)}$.
+])
 
 == The Heisenberg uncertainty principle
-Suppose C and D are two obeservables and $sn.ket(psi)$ a quantum state. 
+Suppose C and D are two observables and $sn.ket(psi)$ a quantum state. 
 Then:
 $ 
 triangle(C) dot triangle(D) >= sn.bra(psi|\[C D\]|psi)/2.

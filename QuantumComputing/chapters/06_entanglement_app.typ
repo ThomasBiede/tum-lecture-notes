@@ -34,7 +34,7 @@ after CNOT:
 $
 sn.ket(psi_1) = 1/sqrt(2) (alpha sn.ket(0) (sn.ket(00) + sn.ket(11)) + beta sn.ket(1)(sn.ket(#text(red)[1]0) + sn.ket(#text(red)[0]1)))
 $
-after Hadamad:
+after Hadamard:
 $
 &sn.ket(psi_2) = 1/2 (alpha (sn.ket(0) + sn.ket(1))(sn.ket(00) + sn.ket(11)) + beta (sn.ket(0) - sn.ket(1))(sn.ket(00) + sn.ket(11)))\
 &= 1/2(sn.ket(00)(alpha sn.ket(0) + beta sn.ket(1)) + sn.ket(01)(alpha sn.ket(1) + beta sn.ket(0)) + sn.ket(10)(alpha sn.ket(1) - beta sn.ket(0)) + sn.ket(11)(alpha sn.ket(1) - beta sn.ket(0))) 

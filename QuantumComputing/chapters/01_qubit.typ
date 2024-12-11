@@ -32,10 +32,19 @@ _standard_ measurement will result in classical bit $0$ with probability $|alpha
 
 if the qubit’s state is measured to be $0$ then it will be $0$ directly after the measurement: $ sn.ket(psi) = sn.ket(0) $ (same for $1$)
 
-#bs.info([*In practice*: one can only estimate the probability $|alpha|^2$, $|beta|^2$ experimental by repeating the same experiment (*trial or shot*)])
+#bs.info([*In practice*: one can only estimate the probability $|alpha|^2$, $|beta|^2$ experimental by repeating the same experiment (_trial_ or _shot_)])
 == Circuit Notation
 
-#bs.placeholder()
+#figure(
+  grid(
+    columns: (1fr, 1fr),
+    gutter: 10pt,
+    align: (horizon, horizon),
+    image("../assets/images/Circuit_notation_1.png", width: 80%),
+    image("../assets/images/Circuit_notation_2.png", width: 80%),
+  ),
+  caption: [Example of two circuit notations]
+)<fig:cn_ex>
 
 === What is a qubit physically? $(sn.ket(0), sn.ket(1))$
 
@@ -51,7 +60,10 @@ $ alpha = cos ( theta/2) quad beta = sin(theta/2)
 \
 |alpha|^2 + |beta|^2 = cos ( theta/2)^2 + sin(theta/2)^2 $
 
-#bs.placeholder()
+#figure(
+  image("../assets/images/unit_circle_complex.png", width: 40%),
+  caption: [Complex plane unit circle]
+) <fig:complex_uc>
 
 In general ($bb(C)$):
 
@@ -61,4 +73,7 @@ sn.ket(psi) &= e^(i dot gamma)cos ( theta/2) dot sn.ket(0) + e^(i dot (gamma + p
 
 Thus $sn.ket(psi)$ is characterized by $theta$ and $phi$
 
-#bs.placeholder()
+#figure(
+  image("../assets/images/bloch_sphere.png", width: 40%),
+  caption: [Bloch sphere representation]
+) <fig:bloch_sphere>

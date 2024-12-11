@@ -11,7 +11,10 @@ $
 sn.ket(psi) = U dot sn.ket(psi)
 $
 
-#bs.placeholder()
+#figure(
+    image("../assets/images/general_quantum_gate.png", width: 40%),
+    caption: [General form of a single bit quantum gate]
+) <fig:single_bit_gate>
 
 #bs.warn([The circuit notation is read from *left to right* but the _normal_ notation ($U dot sn.ket(psi)$) from *right to left*])
 
@@ -48,9 +51,9 @@ this leads to the new *Bloch-Sphere* angle $theta ‘ = theta$, $phi ‘ = phi +
 
 #bs.info([The gates are respectively a $180^degree$ rotation around the axis (The Z-Gate rotates around the Z-Axis and so on).])
 
-_X, Y, Z-Gates_ are called *Pauli-Matrices*. The *Pauli-Vector* $arrow(sigma) = ( sigma_1, sigma_2, sigma_3 ) = ( X, Y, Z )$ is a vector of 2x2-Matrices
+_X, Y, Z-Gates_ are called *Pauli-Matrices*. The *Pauli-Vector* $arrow(sigma) = ( sigma_1, sigma_2, sigma_3 ) = ( X, Y, Z )$ is a vector of $2 times 2$-Matrices
 
-=== Hadamad-Gate
+=== Hadamard-Gate
 
 $
 H = 1/sqrt(2) mat(1, 1; 1, -1)
@@ -60,7 +63,10 @@ $
 H dot sn.ket(psi) = 1/sqrt(2) mat(1, 1; 1, -1 ) dot mat( alpha; beta ) = alpha underbrace((sn.ket(0) + sn.ket(1))/sqrt(2), "Base change") + beta underbrace((sn.ket(0) - sn.ket(1))/sqrt(2), "Base change")
 $
 
-#bs.placeholder()
+#figure(
+    image("../assets/images/hadamard_gate.png", width: 60%),
+    caption: [Circuit notation of the Hadamard gate]
+) <fig:cn_hadamard_gate>
 
 === Phase-Gate
 
