@@ -12,24 +12,24 @@ $
 where $rho$ is the density matrix and $cal(E)$ is a quantum operation. 
 Special cases:
 - unitary time evolution $cal(E)(rho) = U rho U^dagger$
-- measurement, with measurement operator ${M m}$:\
+- measurement, with measurement operator ${M_m}$:\
     recall that 
     $
-    underbrace(p(m), "probability for outcome" m) = tr[M m^dagger M m rho]
+    underbrace(p(m), "probability for outcome" m) = tr[M_m^dagger M_m rho]
     $
     State after obtaining result $m$:
     $ 
-    rho_m = (M m rho M m^dagger)/(tr[M m^dagger M m rho]) = (M m rho M m^dagger)/(p(m)) 
+    rho_m = (M_m rho M_m^dagger)/(tr[M_m^dagger M_m rho]) = (M_m rho M_m^dagger)/(p(m)) 
     $ 
     Corresponding quantum channel (without re-normalization): 
     $ 
-    cal(E)_m(rho) = M m rho M m^dagger 
+    cal(E)_m(rho) = M_m rho M_m^dagger 
     $ 
     $p(m) = tr[cal(E)_m(rho)]$ is the probability that outcome $m$ occurs.
     Consider the scenario of performing a measurement, but not recording the outcome
     $arrow.r.squiggly$ density matrix after this process is weighted  sum over all possible outcomes:
     $ 
-    cal(E)(rho) = sum_m p(m) times #text(blue)[$rho_m$] = sum_m cal(E)_m(rho) = underbrace(sum_m M m rho M m^dagger, "operator-sum representation of" cal(E)) 
+    cal(E)(rho) = sum_m p(m) times #text(blue)[$rho_m$] = sum_m cal(E)_m(rho) = underbrace(sum_m M_m rho M_m^dagger, "operator-sum representation of" cal(E)) 
     $ 
 
 Different (but equivalent) perspectives on quantum operations: 

@@ -1,8 +1,6 @@
 #import "../snippets.typ" as sn
 #import "../block_snippets.typ" as bs
 
-// TODO: complete the editing of the file
-
 = Density operator
 So far: state vector $sn.ket(psi)$ describing a quantum state.
 Convenient alternative formulation for quantum systems about which we only have partial information:
@@ -20,22 +18,22 @@ Quantum mechanics in terms of density operators:
     $ 
     rho arrow.r.bar.long^(U) sum_i p_i U sn.ket(psi_i) underbrace(sn.tek(psi_i) U^dagger, (U sn.ket(psi_i))^dagger) = U(underbrace(sum_i p_i sn.ket(psi_i)sn.tek(psi_i), rho))U^dagger = U rho U^dagger 
     $
-- measurements: measurement operator ${M m}$,  if system is in state $sn.ket(psi_i)$, then probability for result $m$, given $i$, is 
+- measurements: measurement operator ${M_m}$,  if system is in state $sn.ket(psi_i)$, then probability for result $m$, given $i$, is 
     $ 
-    P(M|i) = sn.ket(psi)M m^dagger M m sn.ket(psi_i) = tr[M m^dagger M m sn.ket(psi_i)sn.tek(psi_i)] 
+    P(M|i) = sn.ket(psi)M_m^dagger M_m sn.ket(psi_i) = tr[M_m^dagger M_m sn.ket(psi_i)sn.tek(psi_i)] 
     $ 
     #bs.info([$tr[A B C] = tr[B C A] "and" tr[sn.ket(psi)sn.tek(phi)] = sn.bra(psi|phi)$])
     Thus overall probability for result $m$ is:
     $ 
-    p(m) &= sum_i p(m|i)p_i = sum_i tr[M m^dagger M m sn.ket(psi_i)sn.tek(psi_i)]p_i\
-    &= tr[M m^dagger M m sum_i p_i sn.ket(psi_i)sn.tek(psi_i)]\
-    &= tr[M m^dagger M m rho] 
+    p(m) &= sum_i p(m|i)p_i = sum_i tr[M_m^dagger M_m sn.ket(psi_i)sn.tek(psi_i)]p_i\
+    &= tr[M_m^dagger M_m sum_i p_i sn.ket(psi_i)sn.tek(psi_i)]\
+    &= tr[M_m^dagger M_m rho] 
     $ 
     #bs.question([Density operator $rho_m$ after obtaining the result $m$])
-    State $i$ collapses to $sn.ket(psi_i) arrow.r.long.bar (M m sn.ket(psi_i))/(||M m sn.ket(psi_i)||) =: sn.ket(psi_i^m)$ thus: 
+    State $i$ collapses to $sn.ket(psi_i) arrow.r.long.bar (M_m sn.ket(psi_i))/(||M_m sn.ket(psi_i)||) =: sn.ket(psi_i^m)$ thus: 
     $ 
-    rho_m &= sum_i p(i|m) sn.ket(psi_i^m)sn.tek(psi_i^m) = sum_i p(i|m) (M m sn.ket(psi_i) sn.tek(psi_i)M m^dagger)/(||M m sn.ket(psi_i)||^2)\
-    &= sum_i p_i (M m sn.ket(psi_i)sn.tek(psi_i)M m^dagger)/(p(m)) = (M m rho M m^dagger)/(tr[M m^dagger M m rho]) 
+    rho_m &= sum_i p(i|m) sn.ket(psi_i^m)sn.tek(psi_i^m) = sum_i p(i|m) (M_m sn.ket(psi_i) sn.tek(psi_i)M_m^dagger)/(||M_m sn.ket(psi_i)||^2)\
+    &= sum_i p_i (M_m sn.ket(psi_i)sn.tek(psi_i)M_m^dagger)/(p(m)) = (M_m rho M_m^dagger)/(tr[M_m^dagger M_m rho]) 
     $ 
     #bs.definition([$(p(i|m))/(p(m|i)) = (p_i)/(p(m)) "(Baye's thereom)" P(A|B) = (P(B|A) dot P(A))/(P(B))$])
     Note that $rho_m$ is now expressed in terms of $rho$ and the measurement operators, without explicit reference to the ensemble ${p_i, sn.ket(psi_i)}$
@@ -108,7 +106,6 @@ For the following: given an ensemble ${p_i,sn.ket(psi_i)}$, set $sn.ket(accent(p
 Ensemble  ${sn.ket(accent(psi_i, tilde))}$ _generates_ the density operator $rho$.
 To relate an ensemble ${sn.ket(accent(psi_i, tilde))}_(i=1,dots,m)$ to another ${sn.ket(accent(phi_j, tilde))}_(j=1,dots,n)$ in case $m != n$, we "pad" one of the ensembles with zero vectors, such that without loss of generality $m=n$.\
 
-// TODO: stopped here
 Unitary freedom in the ensemble for density matrices:\
 The sets ${sn.ket(accent(phi_i, tilde))}$ and ${sn.ket(accent(phi_j, tilde))}$ generate the same density matrix if and only if 
 $ 
