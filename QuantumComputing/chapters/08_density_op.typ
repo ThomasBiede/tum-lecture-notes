@@ -36,14 +36,19 @@ Quantum mechanics in terms of density operators:
     &= sum_i p_i (M_m sn.ket(psi_i)sn.tek(psi_i)M_m^dagger)/(p(m)) = (M_m rho M_m^dagger)/(tr[M_m^dagger M_m rho]) 
     $ 
     #bs.definition([$(p(i|m))/(p(m|i)) = (p_i)/(p(m)) "(Baye's thereom)" P(A|B) = (P(B|A) dot P(A))/(P(B))$])
-    Note that $rho_m$ is now expressed in terms of $rho$ and the measurement operators, without explicit reference to the ensemble ${p_i, sn.ket(psi_i)}$
+
+    #bs.info([
+        $rho_m$ is now expressed in terms of $rho$ and the measurement operators, without explicit reference to the ensemble ${p_i, sn.ket(psi_i)}$
+    ])
 == General properties of the density operator
 #bs.definition([
     Characterization of density operators: Am operator $rho$ is the density matrix associated to some ensemble ${p_i, sn.ket(psi_i)}$ if and only if:
     + $tr[rho] = 1$ (trace condition)
     + $rho$ is a positive operator (positive condition)
 ])
-Remark: $rho$ is called a positive operator if it is Hermitian and all its eigenvalues are $>=0$, equivalent if $sn.bra(phi|rho|phi) >= 0$ for all vectors $sn.ket(phi)$.
+#bs.remark([
+    $rho$ is called a positive operator if it is Hermitian and all its eigenvalues are $>=0$, equivalent if $sn.bra(phi|rho|phi) >= 0$ for all vectors $sn.ket(phi)$
+])
 #bs.proof([
     "$arrow.r.double$": Suppose $rho = sum_i p_i sn.ket(psi_i) sn.tek(psi_i)$, then:
     $
@@ -90,7 +95,7 @@ In general let $rho$ be a density operator then $tr[rho^(2)] <= 1.$, and tr[$rho
 ])
 
 #bs.warn([
-    Ensemble representation is not unique!\
+    *Ensemble representation is not unique!*\
     Example:  
     $
     rho = 3/4 sn.ket(0)sn.tek(0) + 1/4 sn.ket(1)sn.tek(1) = 1/2 sn.ket(a)sn.tek(a) + 1/2 sn.ket(b)sn.tek(b) 
@@ -99,7 +104,9 @@ In general let $rho$ be a density operator then $tr[rho^(2)] <= 1.$, and tr[$rho
     $
     sn.ket(a) = sqrt(3/4)sn.ket(0) + sqrt(1/4)sn.ket(1), sn.ket(b) = sqrt(3/4)sn.ket(0) - sqrt(1/4)sn.ket(1) 
     $ 
-    (But note that $sn.ket(0), sn.ket(1)$ are the (unique) eigenvectors of $rho$, and $sn.bra(a|b) != 0 $)\
+    #bs.info([
+        $sn.ket(0), sn.ket(1)$ are the (unique) eigenvectors of $rho$, and $sn.bra(a|b) != 0$)
+    ])
 ])
 
 For the following: given an ensemble ${p_i,sn.ket(psi_i)}$, set $sn.ket(accent(psi_i, tilde)) = sqrt(p_i)sn.ket(psi_i)$ such that $rho = sum_i sn.ket(accent(psi_i, tilde)) sn.tek(accent(psi_i, tilde))$.

@@ -191,8 +191,9 @@ Alternative viewpoint: physical motivated axioms which a quantum operation $cal(
     $
     sigma := (I times.circle cal(E))(#text(blue)[$sn.ket(alpha)$]#text(red)[$sn.tek(alpha)$])
     $
-    Note: $sigma$ p.s.d by $A 3$ i.e. density matrix on combined system\
-    turns out to completely specify $cal(E)$.
+    #bs.info([
+        $sigma$ p.s.d by $A 3$ i.e. density matrix on combined system turns out to completely specify $cal(E)$
+    ])
     For any state $sn.ket(psi) = sum_j psi_j sn.ket(j_Q)$ on $Q$, set $sn.ket(accent(psi, tilde)) := sum_j psi_j^* sn.ket(j_R)$ on $R$:
     $
     arrow.r.squiggly sn.bra(accent(psi, tilde)|sigma|accent(psi, tilde)) =& sn.tek(accent(psi, tilde))sum_(i,j) #text(blue)[$sn.ket(i_r)$]#text(red)[$sn.tek(j_r)$] times.circle cal(E)(#text(blue)[$sn.ket(i_Q)$]#text(red)[$sn.tek(j_Q)$])sn.ket(accent(psi, tilde))\

@@ -73,9 +73,10 @@ $
 (P_m sn.ket( psi))/(||P_m sn.ket( psi)||) =  (P_m sn.ket( psi))/( sqrt( #text(orange)[(p(] lambda_m #text(orange)[)])).
 $
 
-_Remarks_:
-- Projective measurements are special cases of general measurement framework
-- Projective measurements combined with unitary transformations are equivalent to general measurement framework
+#bs.remark([
+  - Projective measurements are special cases of general measurement framework
+  - Projective measurements combined with unitary transformations are equivalent to general measurement framework
+])
 
 Average value of projective measurement:
 $
